@@ -5,7 +5,7 @@ CFLAGS=-Wall -Wextra -O3 -fno-strict-aliasing -DLINUX_ -DOC_NEW_STYLE_INCLUDES -
 all: $(EXEC)
 
 $(EXEC): main.cpp 
-	$(CC) -o $(EXEC) $(CFLAGS) main.cpp kmer.hpp PicklingTools/libptools.so 
+	$(CC) -o $(EXEC) $(CFLAGS) main.cpp kmer.hpp $(PWD)/PicklingTools/libptools.so 
 
 clean: 
 	rm -f *.o

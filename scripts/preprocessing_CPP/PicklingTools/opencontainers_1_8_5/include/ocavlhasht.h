@@ -921,7 +921,8 @@ class AVLHashT {
     {
       // Destruct
       // deleteMyValue_(node->value);
-      node->N::~AVLNode_<K,V>();
+      // Original line: node->N::~AVLNode_<K,V>();
+      delete node;
       
       // All nodes are allocated in chunks: the front node has a ref
       // count so we know when all elements of a chunk are freed.  We
